@@ -1,7 +1,28 @@
+body {
+	background-color: cornflowerblue;
+}
+.table {
+	display: table;
+	width: 100%;
+	background-color: #fff;
+	table-layout: fixed;
+	border-collapse: collapse;
+}
+.table .tr {
+	display: table-row;
+}
+.table .tr .td {
+	height: 200px;
+	display: table-cell;
+	border: 10px solid #000;
+	vertical-align: middle;
+}
 .rectangle-wrap {
+	width: 200px;
 	height: 100px;
 	overflow: hidden;
 	position: relative;
+	margin: 0 auto;
 }
 .rectangle {
 	display: flex;
