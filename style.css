@@ -1,5 +1,47 @@
+.rectangle-wrap {
+	height: 100px;
+	overflow: hidden;
+	position: relative;
+}
 .rectangle {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	color: #fff;
+	font-weight: bold;
+	font-size: 34px;
 	width: 200px;
-	height: 200px;
+	height: 100px;
 	background-color: #FF7F50;
+	position: absolute;
+	animation-name: show;
+	animation-duration: 1s;
+}
+.rectangle.down {
+	opacity: 0;
+	animation-name: hide;
+	animation-duration: 1s;
+}
+
+@keyframes show {
+	0% {
+		opacity: 0;
+		bottom: -300px;
+	}
+	100% {
+		opacity: 1;
+		bottom: 0;
+	}
+}
+
+@keyframes hide {
+	0% {
+		opacity: 1;
+		bottom: 0;
+
+	}
+	100% {
+		opacity: 0;
+		bottom: -300px;
+	}
 }
