@@ -12,11 +12,37 @@ body {
 	display: table-row;
 }
 .table .tr .td {
+	text-align: center;
 	height: 200px;
 	display: table-cell;
 	border: 10px solid #000;
 	vertical-align: middle;
+	position: relative;
 }
+.td-header {
+	position: absolute;
+	top: 0;
+	width: 100%;
+}
+.td-content {
+	height: 100%;
+	padding: 60px 20px 30px 20px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+.td-footer {
+	position: absolute;
+	bottom: 0;
+	width: 100%;
+}
+.btn-default {
+
+}
+
+
+/******* Slide *******/
+
 .rectangle-wrap {
 	width: 200px;
 	height: 100px;
@@ -47,7 +73,7 @@ body {
 @keyframes show {
 	0% {
 		opacity: 0;
-		bottom: -300px;
+		bottom: -100px;
 	}
 	100% {
 		opacity: 1;
@@ -67,7 +93,9 @@ body {
 	}
 }
 
-/* Rolling notice */
+
+/******* Rolling notice *******/
+
 .rolling-notice {
 	margin-top: 20px;
 	height: 38px;
@@ -91,7 +119,7 @@ body {
 	height: 17px;
 	display: inline-block;
 	background-color: #ff3333;
-	line-height: 16px;
+	line-height: 18px;
 	border-radius: 9px;
 	margin-right: 7px;
 	margin-bottom: 2px;
