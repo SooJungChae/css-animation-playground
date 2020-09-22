@@ -66,3 +66,50 @@ body {
 		bottom: -300px;
 	}
 }
+
+/* Rolling notice */
+.rolling-notice {
+	margin-top: 20px;
+	height: 38px;
+	overflow: hidden;
+}
+.rolling-notice .notice {
+	font-size: 15px;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+	margin-top: 38px;
+	display: block;
+}
+.rolling-notice .notice:before {
+	content: 'HEY';
+	color: #fff;
+	font-size: 10px;
+	font-weight: bold;
+	text-align: center;
+	width: 29px;
+	height: 17px;
+	display: inline-block;
+	background-color: #ff3333;
+	line-height: 16px;
+	border-radius: 9px;
+	margin-right: 7px;
+	margin-bottom: 2px;
+	vertical-align: middle;
+}
+.rolling-notice .notice.on {
+	will-change: animation;
+	animation: scrollTop 5s;
+}
+
+@keyframes scrollTop {
+	5% {
+		margin-top: 0;
+	}
+	95% {
+		margin-top: 0;
+	}
+	100% {
+		margin-top: -38px;
+	}
+}
